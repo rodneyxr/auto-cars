@@ -35,7 +35,7 @@ public class Dispatcher : MonoBehaviour
 		var house2spawn = houses [Random.Range (0, houses.Count - 1)];
 		GameObject c = (GameObject)Instantiate (carPrefab, house2spawn.position, house2spawn.rotation);
 		CarAI mycar = c.GetComponent<CarAI> ();
-		mycar.setDestination (houses [Random.Range (0, houses.Count - 1)].position);
+		mycar.startTravel (houses [Random.Range (0, houses.Count - 1)].position);
 	}
 
 	/// <summary>
