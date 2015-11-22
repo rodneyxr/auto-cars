@@ -9,9 +9,13 @@ public class CarAI : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+	}
+
+    public void setDestination(Vector3 pos)
+    {
 		car = GetComponent<NavMeshAgent> ();
 		car.speed = 8f;
-		car.SetDestination (destinations.GetRandomDestination().position);
-	}
+        car.SetDestination(pos);
+    }
 
 }
