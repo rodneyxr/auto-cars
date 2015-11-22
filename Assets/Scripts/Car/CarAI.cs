@@ -43,7 +43,12 @@ public class CarAI : MonoBehaviour
 	public bool isGoingToSensor() {
 		return tempDest;
 	}
-
+    void OnDestroy()
+    {
+        GameObject scorer = GameObject.FindGameObjectWithTag("ScoreObject");
+        Scorer s = scorer.GetComponent<Scorer>();
+        s.scoreIncrement(10); //TODO: 10 will soon be replaced by a value according to the colour of the destroyed car.
+    }
 	void Update ()
 	{
 		if (tempDest)
@@ -54,5 +59,4 @@ public class CarAI : MonoBehaviour
 			GameObject.Destroy (gameObject);
 		}
 	}
-
 }
