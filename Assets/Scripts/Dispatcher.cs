@@ -38,6 +38,10 @@ public class Dispatcher : MonoBehaviour
 		mycar.startTravel (houses [Random.Range (0, houses.Count - 1)].position);
 	}
 
+	public void assignDestination(Player player) {
+		player.startTravel (houses [Random.Range (0, houses.Count - 1)].position);
+	}
+
 	/// <summary>
 	/// Delays the spawning of vehicles.
 	/// </summary>
